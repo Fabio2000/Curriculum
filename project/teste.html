@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS (para os ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <style>
+        /* Estilos do modo escuro */
+        body.dark-mode {
+            background-color: #333;
+            color: #333;
+            text-decoration-color: #fff;
+        }
+    </style>
+
+    <title>Teste</title>
+</head>
+
+<body>
+
+    <nav id="main-nav" class="navbar navbar-expand-sm navbar-light fixed-top py-1">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a href="#home" class="navbar-brand p-0">
+                    <h3 class="d-inline align-middle">Home</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navBarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item p-0 m-0">
+                        <a href="#home" class="nav-link active">
+                            <span class="fas fa-home"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item p-0 m-0">
+                        <a href="#resumo" class="nav-link">Resumo</a>
+                    </li>
+                    <li class="nav-item p-0">
+                        <a href="#history" class="nav-link">Histórico</a>
+                    </li>
+                    <li class="nav-item p-0">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item p-0">
+                        <a href="#formation" class="nav-link">Formação</a>
+                    </li>
+                    <li class="nav-item p-0">
+                        <a href="#projetos" class="nav-link">Projetos</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="theme-toggle" class="theme-toggle ml-auto">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript personalizado -->
+    <script>
+        // Função para alternar o modo claro e escuro
+        function toggleDarkMode() {
+            $('body').toggleClass('dark-mode');
+        }
+
+        // Fechar o colapso após clicar em um link
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+
+        // Evento de clique no botão de alternar tema
+        $('#theme-toggle').on('click', function () {
+            toggleDarkMode();
+        });
+    </script>
+
+</body>
+
+</html>
